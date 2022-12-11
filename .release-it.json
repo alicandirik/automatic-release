@@ -1,0 +1,49 @@
+{
+    "hooks": {
+        "after:bump": [
+            "npm run build",
+            "npx auto-changelog -p"
+        ],
+        "after:release": "echo Release ${name} v${version} into ${branchName} successfully ✓."
+
+    },
+    "git": {
+        "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
+        "commitMessage": "chore(release): v${version}",
+        "requireCleanWorkingDir": true,
+        "requireBranch": false,
+        "requireUpstream": true,
+        "requireCommits": true,
+        "addUntrackedFiles": true,
+        "commit": true,
+        "commitArgs": [],
+        "tag": true,
+        "tagAnnotation": "Release ${version}",
+        "tagArgs": [],
+        "push": true,
+        "pushArgs": ["--follow-tags"]
+    },
+    "npm": {
+        "publish": false
+    },
+    "github": {
+        "release": true,
+        "releaseName": "v${version}",
+        "releaseNotes": "npx auto-changelog --stdout --commit-limit false -u",
+        "autoGenerate": true,
+        "preRelease": false,
+        "draft": false,
+        "tokenRef": "GITHUB_TOKEN",
+        "assets": null,
+        "host": null,
+        "timeout": 0,
+        "skipChecks": false,
+        "web": false
+    },
+    "plugins": {
+        "@release-it/conventional-changelog": {
+            "preset": "angular",
+            "infile": "CHANGELOG.md"
+        }
+    }
+}
