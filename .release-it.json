@@ -20,7 +20,7 @@
         "tag": true,
         "tagAnnotation": "Release ${version}",
         "tagArgs": [],
-        "push": true,
+        "push": false,
         "pushArgs": ["--follow-tags"]
     },
     "npm": {
