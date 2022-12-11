@@ -11,7 +11,7 @@
         "commitMessage": "chore(release): v${version}",
         "requireCleanWorkingDir": true,
         "requireBranch": false,
-        "requireUpstream": true,
+        "requireUpstream": false,
         "requireCommits": true,
         "addUntrackedFiles": true,
         "commit": false,
