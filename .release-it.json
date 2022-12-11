@@ -5,7 +5,6 @@
             "npx auto-changelog -p"
         ],
         "after:release": "echo Release ${name} v${version} into ${branchName} successfully ✓."
-
     },
     "git": {
         "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
