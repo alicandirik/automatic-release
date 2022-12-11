@@ -10,7 +10,7 @@
     "git": {
         "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
         "commitMessage": "chore(release): v${version}",
-        "requireCleanWorkingDir": false,
+        "requireCleanWorkingDir": true,
         "requireBranch": false,
         "requireUpstream": true,
         "requireCommits": true,
