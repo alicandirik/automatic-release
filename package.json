@@ -1,0 +1,31 @@
+{
+  "name": "automatic-release",
+  "version": "1.19.0",
+  "description": "",
+  "scripts": {
+    "postinstall": "npx husky install",
+    "build": "echo build script is executed",
+    "release:pre": "dotenv release-it -- --preRelease",
+    "release:patch": "dotenv release-it -- patch",
+    "release:minor": "dotenv release-it -- minor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alicandirik/automatic-release.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alicandirik/automatic-release/issues"
+  },
+  "homepage": "https://github.com/alicandirik/automatic-release#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "dotenv-cli": "^6.0.0",
+    "husky": "^8.0.2",
+    "release-it": "^15.5.1"
+  }
+}
